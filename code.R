@@ -20,7 +20,7 @@ rawdata <- read_csv('news_final_변환_3.csv',                       # csv 데이터 
                     col_names = TRUE,                       
                     locale=locale('ko', encoding='UTF-8'), # 한글 인코딩처리
                     na=".")
-
+  
 data <- rawdata %>% 
   mutate(word = gsub("[[:cntrl:]]", " ", word)) %>%     
   mutate(word = gsub("사회적 거리두기|사회적거리두기|거리두기", "거리두기", word)) %>%
